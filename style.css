@@ -95,8 +95,11 @@ footer { text-align: center;
           }
 .instagram { background: #e1306c;
            }
-.twitter { background #1da1f2;
-         }
+.twitter {
+  background: #1da1f2;
+}  
+    }
+
 
 body::before {
   content: "";
@@ -115,4 +118,5 @@ body::before {
   50% { transform: translate(40px, 40px); }
   100% { transform: translate(0, 0); }
 }
+
 

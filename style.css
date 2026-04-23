@@ -106,7 +106,7 @@ body::before {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle at 20% 30%, #3b82f6, transparent 40%), radial-gradient(circle at 80% 70%, #9333ea, transparent 40%);
-  opacity: 0.25;
+  opacity: 0.6;
   animation: moveGlow 25s linear infinite;
   z-index: -1;
 }

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Poppins', sans-serif;
   background: transparent;
   background-color: #0f172a;
   color: #e2e8f0;
@@ -72,10 +72,44 @@ nav a:hover {
    color: white;
 }
 
-.hero { padding: 80px;
-       text-align: center;
-       background:  #1e293b;
-      }
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(2, 6, 23, 0.9), rgba(30, 41, 59, 0.7)), url('logo-bg') center/cover no-repeat;
+  }
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero-content span {
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.6);
+}
 
 .section {
   background: rgba(30, 41, 59, 0.7);

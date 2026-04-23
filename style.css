@@ -1,7 +1,8 @@
 body {
-  background: url("https://wallpapercave.com/wp/wp2694502.jpg") no-repeat center;
-  background-size: cover;
-  animation: zoomBg 20s ease-in-out infinite alternate;
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
 }
 
 @keyframes zoomBg {
@@ -30,10 +31,7 @@ nav a { margin: 0 10px;
       }
 
 .section {
-  background: rgba(15, 23, 42, 0.85);
-  margin: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
+   padding: 40px;
 }
   
         

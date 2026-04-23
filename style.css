@@ -1,8 +1,16 @@
 body {
-  margin: 0; 
-  font-family: Arial; 
-  background: black; 
-  color: white; 
+  background: url("https://wallpapercave.com/wp/wp2694502.jpg") no-repeat center;
+  background-size: cover;
+  animation: zoomBg 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomBg {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
 }
 
 header { display: flex; 
@@ -21,8 +29,14 @@ nav a { margin: 0 10px;
        background:  #1e293b;
       }
 
-.section { padding: 40px;
-         }
+.section {
+  background: rgba(15, 23, 42, 0.85);
+  margin: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+  
+        
 
 .games-grid { display: grid; 
              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

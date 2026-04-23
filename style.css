@@ -18,6 +18,11 @@ nav a { margin: 0 10px;
        color: white;
        text-decoration: none;
       }
+nav a:hover {
+   transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  opacity: 0.9;
+}
 
 .hero { padding: 80px;
        text-align: center;

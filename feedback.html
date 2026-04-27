@@ -26,26 +26,94 @@
   <section class="section">
   <h2 class="section-title">Give Us Your Feedback</h2>
   <p>Tell us what you think about the website and games.</p> 
-    <form class="feedback-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
+    <form class="feedback-form" onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <p class="error" id="name-error"></p>
+      
+    <input type="email" id="email" placeholder="Your Email" required>
+    <p class="error" id="email-error"></p>
       
 <label>Rate Your Experience:</label>
-<select>
-  <option>Excellent</option>
-  <option>Good</option>
-  <option>Average</option>
-  <option>Poor</option>
-</select>
+      
+  <div class="stars" id="stars">
+    <i class="fa fa-star" data-value="1"></i>
+    <i class="fa fa-star" data-value="2"></i>
+    <i class="fa fa-star" data-value="3"></i>
+    <i class="fa fa-star" data-value="4"></i>
+    <i class="fa fa-star" data-value="5"></i>
+  </div>
+  <p class="error" id="rating-error"></p>
 
-<textarea placeholder="Your Feedback" rows="5"></textarea>
+  <textarea id="feedback" placeholder="Your Feedback"></textarea>
+  <p class="error" id="feedback-error"></p>
 
-<button type="submit">Submit Feedback</button>
+  <button type="submit">Submit Feedback</button>
+
+  <p class="success" id="success-msg"></p>
 
   </form>
 </section>
   <footer>
   <p>© 2026 Gaming Hub</p>
 </footer>
+  <script>
+let selectedRating = 0;
+
+// Star click logic
+document.querySelectorAll(".stars i").forEach(star => {
+  star.addEventListener("click", function () {
+    selectedRating = this.getAttribute("data-value");
+
+    document.querySelectorAll(".stars i").forEach(s => {
+      s.classList.remove("active");
+    });
+
+    for (let i = 0; i < selectedRating; i++) {
+      document.querySelectorAll(".stars i")[i].classList.add("active");
+    }
+  });
+});
+
+// Validation
+function validateForm() {
+  let valid = true;
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let feedback = document.getElementById("feedback").value;
+
+  document.getElementById("name-error").innerText = "";
+  document.getElementById("email-error").innerText = "";
+  document.getElementById("rating-error").innerText = "";
+  document.getElementById("feedback-error").innerText = "";
+  document.getElementById("success-msg").innerText = "";
+
+  if (name === "") {
+    document.getElementById("name-error").innerText = "Name is required";
+    valid = false;
+  }
+
+  if (email === "" || !email.includes("@")) {
+    document.getElementById("email-error").innerText = "Enter a valid email";
+    valid = false;
+  }
+
+  if (selectedRating == 0) {
+    document.getElementById("rating-error").innerText = "Please select a rating";
+    valid = false;
+  }
+
+  if (feedback === "") {
+    document.getElementById("feedback-error").innerText = "Feedback cannot be empty";
+    valid = false;
+  }
+
+  if (valid) {
+    document.getElementById("success-msg").innerText = "Feedback submitted successfully!";
+  }
+
+  return false; // prevents page reload
+}
+</script>
 </body>
 </html>

@@ -371,3 +371,33 @@ body::before {
   color: #cbd5f5;
   margin-bottom: 10px;
 }
+
+/* Stars */
+.stars {
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.stars i {
+  color: #444;
+  transition: 0.3s;
+}
+
+.stars i.active {
+  color: gold;
+}
+
+/* Error messages */
+.error {
+  color: #f87171;
+  font-size: 13px;
+  margin: -10px 0 5px;
+}
+
+/* Success message */
+.success {
+  color: #4ade80;
+  margin-top: 10px;
+}

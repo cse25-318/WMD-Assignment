@@ -161,6 +161,7 @@ nav a:hover {
   background: #0f172a;
   display: block;
   transition: 0.3s;
+  padding-bottom: 15px;
   
 }
 
